@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><button id="start" onclick="af()">New Calculation</button>
+    
+    </center>
+    <script>
+        var i=0;
+        var a=[];
+        var l=0;
+        var o=[]; 
+        var fv;
+           
+        function af()
+        {
+            
+            a[i] = prompt('Enter a number');
+            fv=a[i];
+           
+         var b = prompt('Do you want to proceed with the calculation?');
+         if(b=="yes" || b=="YES" || b=="Yes" || b=="YEs" || b=="yES" || b=="YeS" || b=="yeS" || b=="yEs")
+         {
+            o[l] = prompt('enter the operator');
+            
+            bf();
+        }
+        else{document.write(fv)}
+         
+        }
+        function bf()
+        {
+            i=i+1;
+            a[i] = prompt('Enter a number');
+            if(o[l] == "+")
+            {
+                fv = fv + a[i];
+
+            }
+            if(o[l] == "*")
+            {
+                fv = fv * a[i];
+
+            }
+            if(o[l] == "/")
+            {
+                fv = fv / a[i];
+
+            }
+            if(o[l] == "-")
+            {
+                fv = fv - a[i];
+
+            }
+             
+            
+         var b = prompt('Do you want to proceed with the calculation?');
+         if(b=="yes" || b=="YES" || b=="Yes" || b=="YEs" || b=="yES" || b=="YeS" || b=="yeS" || b=="yEs")
+         {
+            l=l+1;
+            o[l] = prompt('enter the operator');
+            bf();
+        }
+        else{document.write(fv)}
+        
+         
+        }
+    </script>
+</body>
+</html>
